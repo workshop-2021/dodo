@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="main.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  
+  <link rel="stylesheet" href="styles.css" />
+  <title> Friends Shopping Cart</title>
+</head>
+
+<body>
+  
+  <nav class="nav">
+    <div class="nav__center container">
+      <div class="nav__logo">
+        <h1><img src='FriendsLogo.jpg'><span></br></br>S.h.o.p</span></h1>
+      </div>
+
+      <ul class="nav__list">
+        <a href="#" class="login">Login</a>
+        
+      </ul>
+
+      <div class="hamburger">
+        <svg>
+          <use xlink:href="sprite.svg#icon-menu"></use>
+        </svg>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="background"> 
+      <img src="background.png" alt="">
+    </div>
+  </header>
+ <section class="choose-title">
+   <div>
+     <h1> Let's <span class="txt-type" data-wait="1000" data-words='["Choose" , "Buy",  "Deliver"] '> </span> your Products! </h1>
+   </div>
+ </section>
+  
+    <h2 class="ti">Items Collection</h2>
+      <div class="container">
+          <div class="articles">
+              
+                 <div>
+                  <img src="product-1.png">
+                  <div class="prod">
+                      <h3 class="tit" id="brand1"> Central Perk Mug </h3>
+                      <h4 id="price1">19</h4>
+                      <h4>DT</h4>
+                  </div>
+                  <div class="inputs">
+                      <input type="number" id="quantity1" name="quantity1" min="1" max="99" value="1">
+                      <div>
+                          <button class="addTo" onclick="add(1)">Add</button>
+                          <button id="heart1" ondblclick="fav_item(1)" onclick="not_fav(1)"> ♥️ </button>
+                      </div>
+                  </div>
+                  <p id="message1"></p>
+              </div>
+              <div>
+                <img src="product-2.png">
+                <div class="prod">
+                    <h3 class="tit" id="brand2"> Favorite Quote Shirt </h3>
+                    <h4 id="price2">29</h4>
+                    <h4>DT</h4>
+                </div>
+                <div class="inputs">
+                    <input type="number" id="quantity2" name="quantity2" min="1" max="99" value="1">
+                    <div>
+                        <button class="addTo" onclick="add(2)" onclick ="add_cart()">Add</button>
+                        <button id="heart2" ondblclick="fav_item(2)" onclick="not_fav(2)"> ♥️ </button>
+                    </div>
+                </div>
+                <p id="message2"></p>
+            </div>
+            <div>
+              <img src="product-3.png">
+              <div class="prod">
+                  <h3 class="tit" id="brand3"> My Bullet Journal! </h3>
+                  <h4 id="price3">35</h4>
+                  <h4>DT</h4>
+              </div>
+              <div class="inputs">
+                  <input type="number" id="quantity3" name="quantity3" min="1" max="99" value="1">
+                  <div>
+                      <button class="addTo" onclick="add(3)">Add</button>
+                      <button id="heart3" ondblclick="fav_item(3)" onclick="not_fav(3)"> ♥️ </button>
+                  </div>
+              </div>
+              <p id="message3"></p>
+          </div>
+          <div>
+            <img src="product-4.png">
+            <div class="prod">
+                <h3 class="tit" id="brand4"> Quote T-Shirt  </h3>
+                <h4 id="price4">20</h4>
+                <h4>DT</h4>
+            </div>
+            <div class="inputs">
+                <input type="number" id="quantity4" name="quantity4" min="1" max="99" value="1">
+                <div>
+                    <button class="addTo" onclick="add(4)" onclick="setItemValues()">Add</button>
+                    <button id="heart4" ondblclick="fav_item(4)" onclick="not_fav(4)"> ♥️ </button>
+                </div>
+            </div>
+            <p id="message4"></p>
+        </div>
+        <div>
+          <img src="product-5.png">
+          <div class="prod">
+              <h3 class="tit" id="brand5"> Central Perk Mug </h3>
+              <h4 id="price5">15</h4>
+              <h4>DT</h4>
+          </div>
+          <div class="inputs">
+              <input type="number" id="quantity5" name="quantity5" min="1" max="99" value="1">
+              <div>
+                  <button class="addTo" onclick="add(5)">Add</button>
+                  <button id="heart5" ondblclick="fav_item(5)" onclick="not_fav(5)"> ♥️ </button>
+              </div>
+          </div>
+          <p id="message5"></p>
+      </div>
+      <div>
+        <img src="product-6.png">
+        <div class="prod">
+            <h3 class="tit" id="brand6"> Trucker Hats </h3>
+            <h4 id="price6">17</h4>
+            <h4>DT</h4>
+        </div>
+        <div class="inputs">
+            <input type="number" id="quantity6" name="quantity6" min="1" max="99" value="1">
+            <div>
+                <button class="addTo" onclick="add(6)">Add</button>
+                <button id="heart6" ondblclick="fav_item(6)" onclick="not_fav(6)"> ♥️ </button>
+            </div>
+        </div>
+        <p id="message6"></p>
+    </div>
+    <div>
+      <img src="product-7.png">
+      <div class="prod">
+          <h3 class="tit" id="brand7"> Lot 20 Stickers </h3>
+          <h4 id="price7">30</h4>
+          <h4>DT</h4>
+      </div>
+      <div class="inputs">
+          <input type="number" id="quantity7" name="quantity7" min="1" max="99" value="1">
+          <div>
+              <button class="addTo" onclick="add(7)">Add</button>
+              <button id="heart7" ondblclick="fav_item()" onclick="not_fav()"> ♥️ </button>
+          </div>
+      </div>
+      <p id="message7"></p>
+  </div>
+  <div>
+    <img src="product-8.png">
+    <div class="prod">
+        <h3 class="tit" id="brand8"> Quotes Cuchions </h3>
+        <h4 id="price8">25</h4>
+        <h4>DT</h4>
+    </div>
+    <div class="inputs">
+        <input type="number" id="quantity8" name="quantity8" min="1" max="99" value="1">
+        <div>
+            <button class="addTo" onclick="add(8)">Add</button>
+            <button id="heart8" ondblclick="fav_item(8)" onclick="not_fav(8)"> ♥️ </button>
+        </div>
+    </div>
+    <p id="message8"></p>
+</div>
+<div>
+  <img src="product-9.png">
+  <div class="prod">
+      <h3 class="tit" id="brand9"> Frame Key-Chain </h3>
+      <h4 id="price9">22</h4>
+      <h4>DT</h4>
+  </div>
+  <div class="inputs">
+      <input type="number" id="quantity9" name="quantity9" min="1" max="99" value="1">
+      <div>
+          <button class="addTo" onclick="add(9)">Add</button>
+          <button id="heart9" ondblclick="fav_item(9)" onclick="not_fav(9)"> ♥️ </button>
+      </div>
+  </div>
+  <p id="message9"></p>
+</div>
+<div>
+<img src="product-10.png">
+<div class="prod">
+    <h3 class="tit" id="brand10"> Phone Cases </h3>
+    <h4 id="price10">19.90</h4>
+    <h4>DT</h4>
+</div>
+<div class="inputs">
+    <input type="number" id="quantity10" name="quantity10" min="1" max="99" value="1">
+    <div>
+        <button class="addTo" onclick="add(10)">Add</button>
+        <button id="heart10" ondblclick="fav_item(10)" onclick="not_fav(10)"> ♥️ </button>
+    </div>
+</div>
+<p id="message10"></p>
+</div>
+
+    
+      
+      
+     
+    </div>
+    </div>
+</br></br></br></br>
+  <section class="cart">
+    <h3 class="tit1">My Cart</h3>
+
+    <ul id="items">
+    </ul> 
+    <h3 id="total" >Total: 0 DT</h3>
+  </section>
+</br></br>
+</br></br>
+</br></br>
+  <footer class="footer"> ALL RIGHTS RESERVED 2021 Made by Ghada BOUZAIENE  /  <a href="gomycode.tn"> GOMYCODE </a></footer>
+
+  <script>
+    
+      var total = 0;
+       
+        var i = 1;
+        
+        var itemCost = [];
+
+        
+        function add(n){
+            brand = "brand" + n;
+            priceId = "price" + n;
+            quantityId = "quantity" + n;
+           
+            name = document.getElementById(brand).innerHTML;
+            
+            price = document.getElementById(priceId).innerHTML;
+            
+            quantity = document.getElementById(quantityId).value;
+            
+            var node = document.createElement("LI");
+            
+            item = "item"+i;
+            node.setAttribute("id", item)
+            
+            itemCost[i-1] = Number(price) * Number(quantity);
+           
+            i += 1;
+           
+            var textnode = document.createTextNode(name+" "+quantity+" x "+price+" DT ");
+           
+            node.appendChild(textnode);
+            
+            document.getElementById("items").appendChild(node);
+
+            total += Number(price) * Number(quantity);
+            
+            document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " DT";
+            
+            
+            document.getElementById(item).innerHTML += '<button onclick="deleItem('+"'"+item+"'"+')">x</button>';
+        
+            
+        }
+
+         
+         function deleteE(eId) {
+            document.getElementById(eId).innerHTML = ' ';
+        }
+
+      
+        function deleItem(eId){
+            document.getElementById(eId).remove();
+            
+            n = Number(eId.slice(-1)) - 1;
+          
+            total -= itemCost[n];
+           
+            document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " DT"; 
+        }
+
+        function fav_item (n) {
+          new_id="heart"+n ;
+    document.getElementById(new_id).style.color = "red";
+  
+}
+
+function not_fav(n) {
+  new_id="heart"+n ;
+
+    document.getElementById(new_id).style.color = "white";
+}
+  </script>
+ 
+</body>
+
+</html>
